@@ -5,7 +5,7 @@ import Character from './Characters';
 
 const CharacterList = ({ characters }) => {
   const characterElements = characters.map((character) => (
-    <li key={character.id}>
+    <li key={character._id}>
       <Character
         {...character}
         //the spread will do name={character.name} etc etc
@@ -20,10 +20,10 @@ const CharacterList = ({ characters }) => {
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       species: PropTypes.string.isRequired,
-      skills: PropTypes.string.isRequired,
+      skills: PropTypes.string,
       quote: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
     })
