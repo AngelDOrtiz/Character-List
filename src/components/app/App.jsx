@@ -1,5 +1,8 @@
+/* eslint-disable max-len */
 import React from 'react';
+import AnimalCrossingCharacters from '../../containers/AnimalCrossingCharacters';
+
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <AnimalCrossingCharacters />;
 }
